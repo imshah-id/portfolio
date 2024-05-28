@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Questrial&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+a {
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  color: aliceblue;
+  background-color: #1d4fd818;
+  padding: 9px 6px;
+  border-radius: 34px;
+  letter-spacing: 0.7px;
+}
+header {
+  padding: 6px 36px;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  /* gap: 14px; */
+  justify-content: space-between;
+  text-shadow: 2px 2px 8px gray;
+  /* width: 100svw; */
+  background-color: #0b0e1ddf;
+  color: aliceblue;
+}
+a::before {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgb(41, 41, 249);
+  position: absolute;
+  left: 3px;
+  bottom: 1px;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: width 0.3s ease;
+}
+a:hover::before {
+  width: 100%;
+}
+header h1 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.heroPage {
+  height: 100vh;
+  width: 100%;
+  background: url("_.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  grid-template-columns: 0.8fr 1fr;
+  justify-content: center;
+}
+.userPic {
+  height: 350px;
+  /*max-height: 700%; */
+  top: 2px;
+  transform: translate(50%, -60%);
+
+  position: absolute;
+}
+
+.avatar-container {
+  position: relative;
+  width: 40vw;
+  max-width: 400px;
+  height: 40vw;
+  max-height: 400px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 600px) {
+  .avatar-container {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+.text {
+  color: aliceblue;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateX(-80%);
+  animation: slideIn 1.4s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.text h2 {
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+
+.text p1 {
+  font-size: 2.9rem;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .text h2 {
+    font-weight: 500;
+    font-size: 3rem;
+  }
+
+  .text p1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .text h2 {
+    font-weight: 500;
+    font-size: 2.6rem;
+  }
+
+  .text p1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .text h2 {
+    font-size: 2.2rem;
+  }
+
+  .text p1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  .text p1 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .text h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  .text p1 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 320px) {
+  .text h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  .text p1 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+.skills {
+  height: 100dvh;
+}
