@@ -1,206 +1,68 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Questrial&display=swap");
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-ul {
-  display: flex;
-  list-style-type: none;
-  gap: 10px;
-}
+
 a {
-  text-decoration: none;
-  position: relative;
   font-weight: 500;
-  color: aliceblue;
-  background-color: #1d4fd818;
-  padding: 9px 6px;
-  border-radius: 34px;
-  letter-spacing: 0.7px;
+  color: #646cff;
+  text-decoration: inherit;
 }
-header {
-  padding: 6px 36px;
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
   display: flex;
-  align-items: center;
-  height: 44px;
-  /* gap: 14px; */
-  justify-content: space-between;
-  text-shadow: 2px 2px 8px gray;
-  /* width: 100svw; */
-  background-color: #0b0e1ddf;
-  color: aliceblue;
-}
-a::before {
-  content: "";
-  width: 0%;
-  height: 3px;
-  background-color: rgb(41, 41, 249);
-  position: absolute;
-  left: 3px;
-  bottom: 1px;
-  overflow: hidden;
-  border-radius: 50px;
-  transition: width 0.3s ease;
-}
-a:hover::before {
-  width: 100%;
-}
-header h1 {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-}
-.heroPage {
-  height: 100vh;
-  width: 100%;
-  background: url("_.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.main {
-  display: grid;
   place-items: center;
-  height: 100%;
-  width: 100%;
-  align-content: center;
-  grid-template-columns: 0.8fr 1fr;
-  justify-content: center;
-}
-.userPic {
-  height: 350px;
-  /*max-height: 700%; */
-  top: 2px;
-  transform: translate(50%, -60%);
-
-  position: absolute;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.avatar-container {
-  position: relative;
-  width: 40vw;
-  max-width: 400px;
-  height: 40vw;
-  max-height: 400px;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-.avatar:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 600px) {
-  .avatar-container {
-    width: 40vw;
-    height: 40vw;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-}
-
-.text {
-  color: aliceblue;
-  padding: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  transform: translateX(-80%);
-  animation: slideIn 1.4s forwards;
-}
-
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
+  a:hover {
+    color: #747bff;
   }
-}
-
-.text h2 {
-  font-size: 3.4rem;
-  font-weight: 600;
-}
-
-.text p1 {
-  font-size: 2.9rem;
-  font-weight: 300;
-}
-
-@media (max-width: 1200px) {
-  .text h2 {
-    font-weight: 500;
-    font-size: 3rem;
+  button {
+    background-color: #f9f9f9;
   }
-
-  .text p1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .text h2 {
-    font-weight: 500;
-    font-size: 2.6rem;
-  }
-
-  .text p1 {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .text h2 {
-    font-size: 2.2rem;
-  }
-
-  .text p1 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 650px) {
-  .text h2 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 4px 0;
-  }
-
-  .text p1 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 480px) {
-  .text h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 4px 0;
-  }
-
-  .text p1 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 320px) {
-  .text h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 4px 0;
-  }
-
-  .text p1 {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-}
-.skills {
-  height: 100dvh;
 }
